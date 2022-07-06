@@ -80,7 +80,7 @@ while (len(links) > 0 or passes > rundata["limit"]):
         end = txt.index('"',start)
         
         try:
-            if url(txt[start:end]) != True:
+            if url(txt[start:end]) == True:
                 adresses.append(txt[start:end])
         except:
             print("link too long. continuing")
