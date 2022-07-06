@@ -59,8 +59,12 @@ while (len(links) > 0 or passes > rundata["limit"]):
 
             end = txt.index('"',start)
 
-            if url(txt[start:end]):
-                adresses.append(txt[start:end])
+            try:
+                if url(txt[start:end]) != True:
+                    adresses.append(txt[start:end])
+            except:
+                print("link too long. continuing")
+                break
             i = end+1
             continue
         
@@ -71,8 +75,12 @@ while (len(links) > 0 or passes > rundata["limit"]):
             break
         end = txt.index('"',start)
         
-        if url(txt[start:end]) != True:
-            adresses.append(txt[start:end])
+        try:
+            if url(txt[start:end]) != True:
+                adresses.append(txt[start:end])
+        except:
+            print("link too long. continuing")
+            break
         i = end+1
     
     c = open("links.log","r").read()
