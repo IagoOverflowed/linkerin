@@ -56,7 +56,7 @@ while (len(links) > 0 or passes > rundata["limit"]):
         if txt.count("http://",i) > 0:
 
             start = txt.index("http://",i)
-            if txt.count('"') == 0:
+            if txt.count('"',start) == 0:
 
                 print("no double quotation mark string on "+indexing+" anymore moving on...")
                 break
@@ -73,7 +73,7 @@ while (len(links) > 0 or passes > rundata["limit"]):
             continue
         
         start = txt.index("https://",i)
-        if txt.count('"') == 0:
+        if txt.count('"',start) == 0:
 
             print("no double quotation mark string on "+indexing+" anymore moving on...")
             break
