@@ -46,7 +46,7 @@ while (len(links) > 0 or passes > rundata["limit"]):
         pag = req("GET",indexing,headers={"User-Agent":"Python 3.9.x / linkerin","Mono":"In peaceful bots we trust (https://github.com/IagoOverflowed/linkerin)"})
     except:
         print("Cloudn't get on "+indexing)
-        break
+        continue
     txt = str(pag.content)[2:-1]
     i = 0
     adresses = []
