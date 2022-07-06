@@ -65,11 +65,12 @@ while (len(links) > 0 or passes > rundata["limit"]):
             continue
         
         start = txt.index("https://",i)
-        end = txt.index('"',start)
         if txt.count('"') == 0:
 
             print("no double quotation mark string on "+indexing+" anymore moving on...")
             break
+        end = txt.index('"',start)
+        
         if url(txt[start:end]) != True:
             adresses.append(txt[start:end])
         i = end+1
