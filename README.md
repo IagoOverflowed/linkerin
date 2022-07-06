@@ -17,4 +17,4 @@ to start simply run it. if you want to customize the behaivor run using the comm
 * `--limit-per-pass [int]` : defines the max of links per pass
 * `--delay [float]`        : determines the delay between each link
 * `--deep-dive [1|0]`      : determines if the program should do a deep dive
-* '--starting-at'          : determines the starting position. when set the `Starting position?` prompt will be skipped
+* `--starting-at [str]`    : determines the starting position. when set the `Starting position?` prompt will be skipped
